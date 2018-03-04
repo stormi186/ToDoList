@@ -1,0 +1,94 @@
+@charset "ISO-8859-1";
+
+h1,
+form,
+th,
+tr,
+td {
+  padding: 15px;
+}
+
+.btn-primary {
+  background: #0099cc;
+  color: #ffffff;
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+  background: #0099cc;
+  color: #ffffff;
+}
+
+.blue {
+  color: #0099cc;
+}
+
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block;
+}
+
+.table-responsive td {
+  text-align: center;
+}
+
+.table-responsive td:first-child {
+  text-align: left;
+}
+
+@media
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	.table-responsive td {
+    text-align: left;
+	}
+
+	table, thead, tbody, th, td, tr {
+		display: block;
+	}
+
+	thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	tr { border: 1px solid #ccc; }
+
+	td {
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		padding-left: 50%;
+		word-wrap: break-word;
+	}
+
+	th .text-center { text-align:left }
+
+	td:before {
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+	}
+
+	td:nth-of-type(1):before { content: "to-do text"; }
+	td:nth-of-type(2):before { content: "Completed"; }
+	td:nth-of-type(3):before { content: "Delete"; }
+}

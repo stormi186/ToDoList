@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Minimalist to-do list</title>
+<meta charset="ISO-8859-1">
+<meta name="viewport"
+	content="width=device-width,
+initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous">
+<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12">
+				<h1>Minimalist to-do list</h1>
+				<form id="todoForm">
+					<input type="text" id="todoInput"
+						placeholder="Type in to-do list text...">
+					<button type="button" class="btn btn-primary" onclick="todoList()">Add
+						new</button>
+					<button type="button" class="btn btn-primary"
+						onclick="exportList('todo.txt')">Export List</button>
+					<span class="btn btn-primary btn-file"> Import File<input
+						type="file" id="fileInput">
+					</span>
+					<button type="button" class="btn btn-primary"
+						onclick="clearStorage()">Clear Data</button>
+				</form>
+				<table class="table-responsive" id="todoList">
+					<thead>
+						<tr>
+							<th class="col-xs-8">to-do text</th>
+							<th class="col-xs-2" style="text-align: center">Completed</th>
+							<th class="col-xs-2" style="text-align: center">Delete</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<script src="main.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
+</html>
